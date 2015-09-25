@@ -21,13 +21,14 @@ public class prog_teszt {
         BufferedReader in = new BufferedReader(
         new InputStreamReader(version.openStream()));
 
-        double inputLine=in.read();
+        String inputLine=in.readLine();
         System.out.println(inputLine);
         in.close();
         
         //ov=our version
+        double inputDouble=Double.parseDouble(inputLine);
         double ov=1.0;
-        if (ov<inputLine){
+        if (ov<inputDouble){
             System.out.println("Van újabb verzió");
         }
       

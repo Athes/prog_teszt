@@ -17,14 +17,18 @@ public class prog_teszt {
 
   public static void main(String argv[]) throws IOException {
       //Ellenőrizzük, hogy van-e újabb verzió, ha van, akkor engedélyt kérünk a letöltésre.
-      URL version = new URL("https://raw.githubusercontent.com/Athes/prog_teszt/master/manifest.mf");
+      URL version = new URL("https://raw.githubusercontent.com/Athes/prog_teszt/master/src/prog_teszt/version");
         BufferedReader in = new BufferedReader(
         new InputStreamReader(version.openStream()));
 
-        String inputLine;
-        while ((inputLine = in.readLine()) != null)
-            System.out.println(inputLine);
+        double inputLine=in.read();
+        System.out.println(inputLine);
         in.close();
+        
+        double ov=1.0;
+        if (ov<inputLine){
+            System.out.println("Van újabb verzió");
+        }
       
       
       

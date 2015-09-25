@@ -25,6 +25,7 @@ public class prog_teszt {
         System.out.println(inputLine);
         in.close();
         
+        //ov=our version
         double ov=1.0;
         if (ov<inputLine){
             System.out.println("Van újabb verzió");

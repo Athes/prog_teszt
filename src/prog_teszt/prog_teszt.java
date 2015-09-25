@@ -27,7 +27,7 @@ public class prog_teszt {
         
         //ov=our version
         double inputDouble=Double.parseDouble(inputLine);
-        double ov=1.0;
+        double ov=1.1;
         if (ov<inputDouble){
             System.out.println("Van újabb verzió");
         }

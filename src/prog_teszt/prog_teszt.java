@@ -10,14 +10,33 @@ import java.util.Scanner;
 import java.util.Random;
 import java.io.*;
 import java.net.URL;
+import java.net.InetAddress;
 import java.nio.channels.Channels;
 import java.nio.channels.ReadableByteChannel;
 
 public class prog_teszt {
 
   public static void main(String argv[]) throws IOException {
-      //Ellenőrizzük, hogy van-e újabb verzió, ha van, akkor engedélyt kérünk a letöltésre.
-      URL version = new URL("https://raw.githubusercontent.com/Athes/prog_teszt/master/src/prog_teszt/version");
+      
+        //Ellenőrizzük a hálózati kapcsolatot
+        try
+        {
+            InetAddress address = InetAddress.getByName("8.8.8.8");
+ 
+            // Try to reach the specified address within the timeout
+            // periode. If during this periode the address cannot be
+            // reach then the method returns false.
+            boolean reachable = address.isReachable(10000);
+ 
+            System.out.println("Is host reachable? " + reachable);
+        } catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+      
+      
+        //Ellenőrizzük, hogy van-e újabb verzió, ha van, akkor engedélyt kérünk a letöltésre.
+        URL version = new URL("https://raw.githubusercontent.com/Athes/prog_teszt/master/src/prog_teszt/version");
         BufferedReader in = new BufferedReader(
         new InputStreamReader(version.openStream()));
 

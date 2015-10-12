@@ -38,6 +38,10 @@ public class prog_teszt {
             System.out.println("Kérem töltse le a következő helyről: https://raw.githubusercontent.com/Athes/prog_teszt/master/src/prog_teszt/prog_teszt.jar");
             
         }
+        } catch (Exception exc)
+        {
+            System.err.println("Nincs hálózati kapcsolat, verzió ellenőrzés nem sikerült...");
+        }
       
       
       
@@ -116,13 +120,10 @@ public class prog_teszt {
         }
    
     }   catch (Exception e) {
-	e.printStackTrace();
+	System.err.println("Nem tudtam letölteni a forrásfájlt.");;
     }
   
-    } catch (Exception exc)
-        {
-            exc.printStackTrace();
-        }
+    
 }
   
 

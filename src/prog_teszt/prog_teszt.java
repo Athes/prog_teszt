@@ -19,36 +19,25 @@ public class prog_teszt {
   public static void main(String argv[]) throws IOException {
       
         //Ellenőrizzük a hálózati kapcsolatot
-        try
-        {
-            InetAddress address = InetAddress.getByName("8.8.8.8");
- 
-            // Try to reach the specified address within the timeout
-            // periode. If during this periode the address cannot be
-            // reach then the method returns false.
-            boolean reachable = address.isReachable(10000);
- 
-            System.out.println("Is host reachable? " + reachable);
-        
-        if (reachable){
-      
+        try{
+                  
         //Ellenőrizzük, hogy van-e újabb verzió, ha van, akkor engedélyt kérünk a letöltésre.
         URL version = new URL("https://raw.githubusercontent.com/Athes/prog_teszt/master/src/prog_teszt/version");
         BufferedReader in = new BufferedReader(
         new InputStreamReader(version.openStream()));
 
         String inputLine=in.readLine();
-        System.out.println(inputLine);
+        //System.out.println(inputLine);
         in.close();
         
         //ov=our version
         double inputDouble=Double.parseDouble(inputLine);
         double ov=1.0;
         if (ov<inputDouble){
-            System.out.println("Van újabb verzió");
+            System.out.println("Elérhető egy újabb verzió: "+inputLine);
             System.out.println("Kérem töltse le a következő helyről:");
             
-        }}
+        }
       
       
       
@@ -124,15 +113,18 @@ public class prog_teszt {
 
 		}
 	}
-   }
+        }
+   
     }   catch (Exception e) {
 	e.printStackTrace();
     }
+  
     } catch (Exception exc)
         {
             exc.printStackTrace();
         }
-  }
+}
+  
 
   
   

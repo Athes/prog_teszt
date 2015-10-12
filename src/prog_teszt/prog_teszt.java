@@ -35,7 +35,7 @@ public class prog_teszt {
         double ov=1.0;
         if (ov<inputDouble){
             System.out.println("Elérhető egy újabb verzió: "+inputLine);
-            System.out.println("Kérem töltse le a következő helyről:");
+            System.out.println("Kérem töltse le a következő helyről: https://raw.githubusercontent.com/Athes/prog_teszt/master/src/prog_teszt/prog_teszt.jar");
             
         }
       

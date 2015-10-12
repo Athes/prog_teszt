@@ -29,11 +29,8 @@ public class prog_teszt {
             boolean reachable = address.isReachable(10000);
  
             System.out.println("Is host reachable? " + reachable);
-        } catch (Exception e)
-        {
-            e.printStackTrace();
-        }
-      
+        
+        if (reachable){
       
         //Ellenőrizzük, hogy van-e újabb verzió, ha van, akkor engedélyt kérünk a letöltésre.
         URL version = new URL("https://raw.githubusercontent.com/Athes/prog_teszt/master/src/prog_teszt/version");
@@ -49,8 +46,9 @@ public class prog_teszt {
         double ov=1.0;
         if (ov<inputDouble){
             System.out.println("Van újabb verzió");
+            System.out.println("Kérem töltse le a következő helyről:");
             
-        }
+        }}
       
       
       
@@ -130,7 +128,10 @@ public class prog_teszt {
     }   catch (Exception e) {
 	e.printStackTrace();
     }
-    
+    } catch (Exception exc)
+        {
+            exc.printStackTrace();
+        }
   }
 
   

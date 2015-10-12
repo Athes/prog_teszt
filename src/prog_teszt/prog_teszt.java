@@ -30,6 +30,7 @@ public class prog_teszt {
         double ov=1.1;
         if (ov<inputDouble){
             System.out.println("Van újabb verzió");
+            
         }
       
       
